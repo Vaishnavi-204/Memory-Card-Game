@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Master</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="home-screen" class="screen">
+        <div class="container">
+            <h1>Memory Master</h1>
+            <div class="settings">
+                <div class="setting-group">
+                    <h3>Card Type</h3>
+                    <div class="card-types">
+                        <div class="card-option" data-type="animals">
+                            <div class="card-preview"
+                                style="background-image: url('Animals/animalBG.jpg')">
+                            </div>
+                            <span>Animals</span>
+                        </div>
+                        <div class="card-option" data-type="fruits">
+                            <div class="card-preview"
+                                style="background-image: url('https://source.unsplash.com/random/300x400/?fruit')">
+                            </div>
+                            <span>Fruits</span>
+                        </div>
+                        <div class="card-option" data-type="flags">
+                            <div class="card-preview"
+                                style="background-image: url('https://source.unsplash.com/random/300x400/?flag')"></div>
+                            <span>Emoji</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Difficulty</h3>
+                    <div class="difficulty-levels">
+                        <button class="level-btn" data-pairs="8">Easy </button>
+                        <button class="level-btn" data-pairs="9">Medium </button>
+                        <button class="level-btn" data-pairs="12">Hard </button>
+                    </div>
+                </div>
+            </div>
+            <button id="start-btn" class="start-btn">Start Game</button>
+        </div>
+    </div>
+
+    <div id="game-screen" class="screen hidden">
+        <div class="game-header">
+            <div class="stats">
+                <div class="stat-box">
+                    <span>Moves:</span>
+                    <span id="moves">0</span>
+                </div>
+                <div class="stat-box">
+                    <span>Matches:</span>
+                    <span id="matches">0</span>/<span id="total-pairs">0</span>
+                </div>
+                <div class="stat-box">
+                    <span>Time:</span>
+                    <span id="time">00:00</span>
+                </div>
+            </div>
+            <button id="back-btn" class="back-btn">Menu</button>
+        </div>
+        <div class="game-board" id="game-board"></div>
+    </div>
+
+    <div id="win-screen" class="screen hidden">
+        <div class="win-container">
+            <h2>Congratulations!</h2>
+            <p>You completed the game in <span id="final-moves">0</span> moves!</p>
+            <p>Time: <span id="final-time">00:00</span></p>
+            <div class="win-buttons">
+                <button id="play-again-btn" class="win-btn">Play Again</button>
+                <button id="new-game-btn" class="win-btn">New Game</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
