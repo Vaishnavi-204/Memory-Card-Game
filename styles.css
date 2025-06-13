@@ -9,7 +9,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* background-color: #9370DB; */
     /* background: linear-gradient(135deg, #0037fe, #060303, #6600ff); */
-    background: linear-gradient(-45deg, #9370DB, #8A2BE2, #E6E6FA, white);
+    /* background: linear-gradient(-45deg, #9370DB, #8A2BE2, #E6E6FA, white); */
+    background-clip: url("https://www.shutterstock.com/shutterstock/videos/3657478763/preview/stock-footage-flow-of-flat-crystals-on-black.webm");
     background-size: 400% 400%;
     /* animation: gradientBG 10s ease infinite; */
     /* background-size: 400% 400%;  */
@@ -18,6 +19,43 @@ body {
     color: white;
     overflow: hidden;
 }
+#video-background {
+            opacity: calc(20px);
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+
+        .video-background {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+    }
+    
+    .video-foreground {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    
+    .content {
+        position: relative;
+        z-index: 1;
+        color: white;
+    }
 
 @keyframes gradient {
     0% {
@@ -48,6 +86,8 @@ body {
 
 /* Home Screen */
 .container {
+     backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(px); /* For Safari */
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
     padding: 30px;
@@ -121,6 +161,7 @@ h1 {
 }
 
 .card-preview {
+    background-size: cover;
     width: 100px;
     height: 140px;
     border-radius: 10px;
@@ -228,17 +269,22 @@ h1 {
 .game-board {
     display: grid;
     gap: 15px;
+     backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(px); /* For Safari */
     width: 100%;
-    max-width: 550px;
+    max-width: 500px;
     margin-top: 80px;
     perspective: 950px;
     /* background: linear-gradient(165deg, #1a2a6c, #b21f1f, #fdbb2d);
-    animation: gradient 15s ease infinite; */
-    background-color: #9370DB;
+    animation: gradient 15s ease infinite;  */
+    /* background-color: #9470db22; */
+    background: linear-gradient(-45deg, #9370DB, #892be285, #e6e6fa00, white);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
     padding: 30px;
      background-size: 400% 400%;
     border-radius: 20px;
-    -webkit-backdrop-filter: blur(80px);
+    backdrop-filter: blur;
 }
 @keyframes gradient {
     0% { background-position: 0% 50%; }
@@ -276,8 +322,8 @@ h1 {
 }
 
 .card-back {
-    background: linear-gradient(135deg, #2c3e50, #34495e);
-    /* background-image:url(https://th.bing.com/th/id/OIP.Mmujw-naZu3PjLRkUJTb5AHaEo?rs=1&pid=ImgDetMain); */
+    
+     background-image:url(https://i.pinimg.com/originals/94/66/26/946626fc5448a4651dbae29951180d46.jpg); 
     background-position: center;
      background-size: cover;
 }

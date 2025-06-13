@@ -8,6 +8,7 @@ const cardSets = {
     "Animals/donkey.jpg",
     "Animals/cow.jpg",
     "Animals/jiraff.jpg",
+    "Animals/.jpg",
     "Animals/panda.jpg",
     "Animals/rabbit.jpg",
     "Animals/squirrel.jpg",
@@ -24,7 +25,8 @@ const cardSets = {
     "Fruits/pomegranate.jpg",
     "Fruits/watermelon.jpg",
     "Fruits/strawberry.jpg",
-    "Fruits/guava.jpg"
+    "Fruits/guava.jpg",
+    "Fruits/orange.jpg",
     ],
     flags: [
     "",
