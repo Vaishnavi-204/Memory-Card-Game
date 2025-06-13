@@ -128,33 +128,32 @@ function startGame() {
 
     const selectedCards = cardSets[selectedCardType].slice(0, pairsToMatch);
 
-    // Create pairs
+    
     const cardPairs = [...selectedCards, ...selectedCards];
 
-    // Shuffle cards
+    
     cards = shuffleArray(cardPairs);
 
-    // Reset game state
+    
     flippedCards = [];
     matchedPairs = 0;
     moves = 0;
     seconds = 0;
     gameStarted = true;
 
-    // Update UI
+    
     movesDisplay.textContent = moves;
     matchesDisplay.textContent = matchedPairs;
     totalPairsDisplay.textContent = pairsToMatch;
     timeDisplay.textContent = '00:00';
 
-    // Switch screens
+    
     homeScreen.classList.add('hidden');
     gameScreen.classList.remove('hidden');
 
-    // Render game board
     renderGameBoard();
 
-    // Start timer
+   
     if (timer) clearInterval(timer);
     timer = setInterval(updateTimer, 1000);
 }
@@ -163,7 +162,7 @@ function startGame() {
 function renderGameBoard() {
     gameBoard.innerHTML = '';
 
-    // Set grid columns based on difficulty
+    
     let columns;
     if (pairsToMatch <= 8) columns = 4;
     else if (pairsToMatch <= 8) columns = 4;
@@ -172,7 +171,7 @@ function renderGameBoard() {
 
     gameBoard.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
 
-    // Create cards
+    
     cards.forEach((cardImage, index) => {
         const cardElement = document.createElement('div');
         cardElement.className = 'card';

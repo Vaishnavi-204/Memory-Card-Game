@@ -193,7 +193,8 @@ h1 {
 }
 
 .level-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    background-color:purple
 }
 
 .level-btn.selected {
@@ -222,7 +223,7 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Game Screen */
+
 .game-header {
     position: absolute;
     top: 20px;
@@ -269,10 +270,11 @@ h1 {
      backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(px); /* For Safari */
     width: 100%;
-    max-width: 550px;
-    margin-top: 80px;
-    perspective: 950px;
-    /* background: linear-gradient(165deg, #1a2a6c, #b21f1f, #fdbb2d);
+    width: 580px;
+    height: 500px;
+    margin-top: 130px;
+    perspective: 990px;
+    /* background: linear-gradient(65deg, #1a2a6c, #b21f1f, #fdbb2d);
     animation: gradient 15s ease infinite;  */
     /* background-color: #9470db22; */
     background: linear-gradient(-45deg, #9370DB, #892be285, #e6e6fa00, white);
@@ -289,7 +291,7 @@ h1 {
     100% { background-position: 0% 50%; }
 }
 
-/* Card Styles */
+
 .card {
     aspect-ratio: 3/4;
     position: relative;
@@ -298,6 +300,8 @@ h1 {
     cursor: pointer;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    height: 100px;
+    width: 75px;
 }
 
 .card-face {
