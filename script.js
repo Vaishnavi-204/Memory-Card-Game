@@ -124,7 +124,6 @@ newGameBtn.addEventListener('click', () => {
 function startGame() {
     
     const selectedCards = cardSets[selectedCardType].slice(0, pairsToMatch);
-<<<<<<< HEAD
 
     // Create pairs
     const cardPairs = [...selectedCards, ...selectedCards];
@@ -133,33 +132,17 @@ function startGame() {
     cards = shuffleArray(cardPairs);
 
     // Reset game state
-=======
-    
-   
-    const cardPairs = [...selectedCards, ...selectedCards];
-    
-    
-    cards = shuffleArray(cardPairs);
-    
-    
->>>>>>> 27f86fd77fea82f73444e6f671e93308b269c1d5
     flippedCards = [];
     matchedPairs = 0;
     moves = 0;
     seconds = 0;
     gameStarted = true;
-<<<<<<< HEAD
 
     // Update UI
-=======
-    
-    
->>>>>>> 27f86fd77fea82f73444e6f671e93308b269c1d5
     movesDisplay.textContent = moves;
     matchesDisplay.textContent = matchedPairs;
     totalPairsDisplay.textContent = pairsToMatch;
     timeDisplay.textContent = '00:00';
-<<<<<<< HEAD
 
     // Switch screens
     homeScreen.classList.add('hidden');
@@ -169,17 +152,6 @@ function startGame() {
     renderGameBoard();
 
     // Start timer
-=======
-    
-    
-    homeScreen.classList.add('hidden');
-    gameScreen.classList.remove('hidden');
-    
-    
-    renderGameBoard();
-    
-    
->>>>>>> 27f86fd77fea82f73444e6f671e93308b269c1d5
     if (timer) clearInterval(timer);
     timer = setInterval(updateTimer, 1000);
 }
@@ -187,13 +159,8 @@ function startGame() {
 
 function renderGameBoard() {
     gameBoard.innerHTML = '';
-<<<<<<< HEAD
 
     // Set grid columns based on difficulty
-=======
-    
-    
->>>>>>> 27f86fd77fea82f73444e6f671e93308b269c1d5
     let columns;
     if (pairsToMatch <= 8) columns = 4;
     else if (pairsToMatch <= 8) columns = 4;
@@ -201,13 +168,8 @@ function renderGameBoard() {
 
 
     gameBoard.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
-<<<<<<< HEAD
 
     // Create cards
-=======
-    
-    
->>>>>>> 27f86fd77fea82f73444e6f671e93308b269c1d5
     cards.forEach((cardImage, index) => {
         const cardElement = document.createElement('div');
         cardElement.className = 'card';
@@ -255,13 +217,8 @@ function flipCard(index) {
                 cards[firstIndex] = null;
                 cards[secondIndex] = null;
                 flippedCards = [];
-<<<<<<< HEAD
 
                 // Check for win
-=======
-                
-                
->>>>>>> 27f86fd77fea82f73444e6f671e93308b269c1d5
                 if (matchedPairs === pairsToMatch) {
                     clearInterval(timer);
                     setTimeout(showWinScreen, 500);
