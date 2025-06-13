@@ -48,7 +48,7 @@ const cardSets = {
     "Fruits/papaya.jpg",
     "Fruits/.jpg",
     "Fruits/.jpg",
-     "Fruits/.jpg"
+    "Fruits/.jpg"
     ]
 };
 
