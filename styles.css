@@ -1,4 +1,3 @@
-/* Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,8 +11,6 @@ body {
     /* background: linear-gradient(-45deg, #9370DB, #8A2BE2, #E6E6FA, white); */
     background-clip: url("https://www.shutterstock.com/shutterstock/videos/3657478763/preview/stock-footage-flow-of-flat-crystals-on-black.webm");
     background-size: 400% 400%;
-    /* animation: gradientBG 10s ease infinite; */
-    /* background-size: 400% 400%;  */
     animation: gradient 5s ease infinite;
     height: 100vh;
     color: white;
@@ -112,7 +109,7 @@ h1 {
 }
 
 .setting-group {
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.1); */
     border-radius: 15px;
     padding: 20px;
     min-width: 250px;
@@ -272,7 +269,7 @@ h1 {
      backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(px); /* For Safari */
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
     margin-top: 80px;
     perspective: 950px;
     /* background: linear-gradient(165deg, #1a2a6c, #b21f1f, #fdbb2d);
@@ -282,7 +279,7 @@ h1 {
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
     padding: 30px;
-     background-size: 400% 400%;
+    background-size: 400% 400%;
     border-radius: 20px;
     backdrop-filter: blur;
 }

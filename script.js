@@ -14,20 +14,6 @@ const cardSets = {
         "Animals/squirrel.jpg",
         "Animals/monkey.jpg"
     ],
-    fruits: [
-        "Fruits/apple.jpg",
-        "Fruits/pineapple.jpg",
-        "Fruits/cavy.jpg",
-        "Fruits/banana.jpg",
-        "Fruits/cherry.jpg",
-        "Fruits/grapes.jpg",
-        "Fruits/jamun.jpg",
-        "Fruits/pomegranate.jpg",
-        "Fruits/watermelon.jpg",
-        "Fruits/strawberry.jpg",
-        "Fruits/guava.jpg",
-        "Fruits/orange.jpg",
-    ],
     flags: [
         "emojis/2.png",
         "emojis/1.png",
@@ -45,11 +31,29 @@ const cardSets = {
         "emojis/14.png",
         "emojis/15.png",
         "emojis/16.png"
-       
+    ],
+    fruits: [
+    "Fruits/apple.jpg",
+    "Fruits/pineapple.jpg",
+    "Fruits/cavy.jpg",
+    "Fruits/banana.jpg",
+    "Fruits/cherry.jpg",
+    "Fruits/grapes.jpg",
+    "Fruits/jamun.jpg",
+    "Fruits/pomegranate.jpg",
+    "Fruits/watermelon.jpg",
+    "Fruits/strawberry.jpg",
+    "Fruits/guava.jpg",
+    "Fruits/orange.jpg",,
+    "Fruits/orange.jpg",
+    "Fruits/papaya.jpg",
+    "Fruits/.jpg",
+    "Fruits/.jpg",
+    "Fruits/.jpg"
     ]
 };
 
-// Game State
+
 let selectedCardType = 'animals';
 let pairsToMatch = 8;
 let cards = [];
@@ -60,7 +64,7 @@ let timer = null;
 let seconds = 0;
 let gameStarted = false;
 
-// DOM Elements
+
 const homeScreen = document.getElementById('home-screen');
 const gameScreen = document.getElementById('game-screen');
 const winScreen = document.getElementById('win-screen');
@@ -76,7 +80,7 @@ const backBtn = document.getElementById('back-btn');
 const playAgainBtn = document.getElementById('play-again-btn');
 const newGameBtn = document.getElementById('new-game-btn');
 
-// Card Selection
+
 document.querySelectorAll('.card-option').forEach(option => {
     option.addEventListener('click', () => {
         document.querySelectorAll('.card-option').forEach(opt => {
@@ -87,7 +91,7 @@ document.querySelectorAll('.card-option').forEach(option => {
     });
 });
 
-// Difficulty Selection
+
 document.querySelectorAll('.level-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.level-btn').forEach(b => {
@@ -98,28 +102,29 @@ document.querySelectorAll('.level-btn').forEach(btn => {
     });
 });
 
-// Start Game
+
 startBtn.addEventListener('click', startGame);
 
-// Back to Menu
+
 backBtn.addEventListener('click', backToHome);
 
-// Play Again
+
 playAgainBtn.addEventListener('click', () => {
     winScreen.classList.add('hidden');
     startGame();
 });
 
-// New Game
+
 newGameBtn.addEventListener('click', () => {
     winScreen.classList.add('hidden');
     homeScreen.classList.remove('hidden');
 });
 
-// Initialize Game
+
 function startGame() {
-    // Select the required number of unique cards
+    
     const selectedCards = cardSets[selectedCardType].slice(0, pairsToMatch);
+<<<<<<< HEAD
 
     // Create pairs
     const cardPairs = [...selectedCards, ...selectedCards];
@@ -128,17 +133,33 @@ function startGame() {
     cards = shuffleArray(cardPairs);
 
     // Reset game state
+=======
+    
+   
+    const cardPairs = [...selectedCards, ...selectedCards];
+    
+    
+    cards = shuffleArray(cardPairs);
+    
+    
+>>>>>>> 27f86fd77fea82f73444e6f671e93308b269c1d5
     flippedCards = [];
     matchedPairs = 0;
     moves = 0;
     seconds = 0;
     gameStarted = true;
+<<<<<<< HEAD
 
     // Update UI
+=======
+    
+    
+>>>>>>> 27f86fd77fea82f73444e6f671e93308b269c1d5
     movesDisplay.textContent = moves;
     matchesDisplay.textContent = matchedPairs;
     totalPairsDisplay.textContent = pairsToMatch;
     timeDisplay.textContent = '00:00';
+<<<<<<< HEAD
 
     // Switch screens
     homeScreen.classList.add('hidden');
@@ -148,15 +169,31 @@ function startGame() {
     renderGameBoard();
 
     // Start timer
+=======
+    
+    
+    homeScreen.classList.add('hidden');
+    gameScreen.classList.remove('hidden');
+    
+    
+    renderGameBoard();
+    
+    
+>>>>>>> 27f86fd77fea82f73444e6f671e93308b269c1d5
     if (timer) clearInterval(timer);
     timer = setInterval(updateTimer, 1000);
 }
 
-// Render Game Board
+
 function renderGameBoard() {
     gameBoard.innerHTML = '';
+<<<<<<< HEAD
 
     // Set grid columns based on difficulty
+=======
+    
+    
+>>>>>>> 27f86fd77fea82f73444e6f671e93308b269c1d5
     let columns;
     if (pairsToMatch <= 8) columns = 4;
     else if (pairsToMatch <= 8) columns = 4;
@@ -164,8 +201,13 @@ function renderGameBoard() {
 
 
     gameBoard.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+<<<<<<< HEAD
 
     // Create cards
+=======
+    
+    
+>>>>>>> 27f86fd77fea82f73444e6f671e93308b269c1d5
     cards.forEach((cardImage, index) => {
         const cardElement = document.createElement('div');
         cardElement.className = 'card';
@@ -186,7 +228,7 @@ function renderGameBoard() {
     });
 }
 
-// Flip Card
+
 function flipCard(index) {
     if (!gameStarted || flippedCards.length >= 2 || flippedCards.includes(index) || cards[index] === null) {
         return;
@@ -203,7 +245,7 @@ function flipCard(index) {
         const [firstIndex, secondIndex] = flippedCards;
 
         if (cards[firstIndex] === cards[secondIndex]) {
-            // Match found
+           
             matchedPairs++;
             matchesDisplay.textContent = matchedPairs;
 
@@ -213,15 +255,20 @@ function flipCard(index) {
                 cards[firstIndex] = null;
                 cards[secondIndex] = null;
                 flippedCards = [];
+<<<<<<< HEAD
 
                 // Check for win
+=======
+                
+                
+>>>>>>> 27f86fd77fea82f73444e6f671e93308b269c1d5
                 if (matchedPairs === pairsToMatch) {
                     clearInterval(timer);
                     setTimeout(showWinScreen, 500);
                 }
             }, 500);
         } else {
-            // No match
+            
             setTimeout(() => {
                 document.querySelector(`.card[data-index="${firstIndex}"]`).classList.remove('flipped');
                 document.querySelector(`.card[data-index="${secondIndex}"]`).classList.remove('flipped');
@@ -231,7 +278,7 @@ function flipCard(index) {
     }
 }
 
-// Show Win Screen
+
 function showWinScreen() {
     gameScreen.classList.add('hidden');
     winScreen.classList.remove('hidden');
@@ -239,7 +286,7 @@ function showWinScreen() {
     finalTimeDisplay.textContent = formatTime(seconds);
 }
 
-// Back to Home
+
 function backToHome() {
     gameScreen.classList.add('hidden');
     homeScreen.classList.remove('hidden');
@@ -247,20 +294,20 @@ function backToHome() {
     gameStarted = false;
 }
 
-// Update Timer
+
 function updateTimer() {
     seconds++;
     timeDisplay.textContent = formatTime(seconds);
 }
 
-// Format Time
+
 function formatTime(totalSeconds) {
     const minutes = Math.floor(totalSeconds / 60);
     const seconds = totalSeconds % 60;
     return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
 
-// Shuffle Array
+
 function shuffleArray(array) {
     const newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
@@ -270,7 +317,7 @@ function shuffleArray(array) {
     return newArray;
 }
 
-// Preload images for better performance
+
 function preloadImages() {
     const allImages = [];
     for (const set in cardSets) {
@@ -282,7 +329,7 @@ function preloadImages() {
     });
 }
 
-// Initialize
+
 preloadImages();
 document.querySelector('.card-option').classList.add('selected');
 document.querySelector('.level-btn[data-pairs="8"]').classList.add('selected');
