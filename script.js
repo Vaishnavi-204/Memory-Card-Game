@@ -17,6 +17,25 @@ const cardSets = {
         "Animals/pig.jpg",
         "Animals/lion.jpg"
     ],
+    fruits: [
+        "Fruits/apple.jpg",
+        "Fruits/pineapple.jpg",
+        "Fruits/cavy.jpg",
+        "Fruits/banana.jpg",
+        "Fruits/cherry.jpg",
+        "Fruits/grapes.jpg",
+        "Fruits/jamun.jpg",
+        "Fruits/pomegranate.jpg",
+        "Fruits/watermelon.jpg",
+        "Fruits/strawberry.jpg",
+        "Fruits/guava.jpg",
+        "Fruits/orange.jpg",
+        "Fruits/papaya.jpg",
+        "Fruits/coconut.jpg",
+        "Fruits/dragon.jpg",
+        "Fruits/lemon.jpg"
+    ],
+
     flags: [
         "emojis/2.png",
         "emojis/1.png",
@@ -34,24 +53,6 @@ const cardSets = {
         "emojis/14.png",
         "emojis/15.png",
         "emojis/16.png"
-    ],
-    fruits: [
-    "Fruits/apple.jpg",
-    "Fruits/pineapple.jpg",
-    "Fruits/cavy.jpg",
-    "Fruits/banana.jpg",
-    "Fruits/cherry.jpg",
-    "Fruits/grapes.jpg",
-    "Fruits/jamun.jpg",
-    "Fruits/pomegranate.jpg",
-    "Fruits/watermelon.jpg",
-    "Fruits/strawberry.jpg",
-    "Fruits/guava.jpg",
-    "Fruits/orange.jpg",
-    "Fruits/papaya.jpg",
-    "Fruits/coconut.jpg",
-    "Fruits/dragon.jpg",
-    "Fruits/lemon.jpg"
     ]
 };
 
@@ -124,7 +125,7 @@ newGameBtn.addEventListener('click', () => {
 
 
 function startGame() {
-    
+
     const selectedCards = cardSets[selectedCardType].slice(0, pairsToMatch);
 
     // Create pairs
@@ -209,7 +210,7 @@ function flipCard(index) {
         const [firstIndex, secondIndex] = flippedCards;
 
         if (cards[firstIndex] === cards[secondIndex]) {
-           
+
             matchedPairs++;
             matchesDisplay.textContent = matchedPairs;
 
@@ -227,7 +228,7 @@ function flipCard(index) {
                 }
             }, 500);
         } else {
-            
+
             setTimeout(() => {
                 document.querySelector(`.card[data-index="${firstIndex}"]`).classList.remove('flipped');
                 document.querySelector(`.card[data-index="${secondIndex}"]`).classList.remove('flipped');

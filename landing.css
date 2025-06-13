@@ -1,0 +1,254 @@
+:root {
+    --primary: #4a6fa5;
+    --secondary: #166088;
+    --accent: #4fc3f7;
+    --dark: #1a2a3a;
+    --light: #f8f9fa;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.landing-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.game-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.game-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* Card Demo Styles */
+.game-preview {
+    margin: 30px 0;
+}
+
+.card-demo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.demo-card {
+    width: 120px;
+    height: 160px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.demo-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-face.front {
+    background-color: white;
+    transform: rotateY(180deg);
+    padding: 10px;
+}
+
+.card-face.back {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    background-image: 
+        linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
+    background-size: 20px 20px;
+}
+
+/* How to Play Section */
+.how-to-play {
+    margin: 40px 0;
+    text-align: left;
+}
+
+.how-to-play h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.instructions {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.instructions li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.instructions li i {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.feature {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    min-width: 200px;
+    flex: 1;
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+/* Start Button */
+.start-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--accent);
+    color: var(--dark);
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.start-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(79, 195, 247, 0.5);
+}
+
+.start-button i {
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .landing-container {
+        padding: 30px;
+    }
+    
+    .card-demo {
+        gap: 20px;
+    }
+    
+    .demo-card {
+        width: 100px;
+        height: 140px;
+    }
+    
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-container {
+        padding: 20px;
+    }
+    
+    .game-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .demo-card {
+        width: 80px;
+        height: 120px;
+    }
+    
+    .instructions li {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    
+    .start-button {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+}
