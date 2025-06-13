@@ -293,3 +293,4 @@ function preloadImages() {
 preloadImages();
 document.querySelector('.card-option').classList.add('selected');
 document.querySelector('.level-btn[data-pairs="8"]').classList.add('selected');
+
