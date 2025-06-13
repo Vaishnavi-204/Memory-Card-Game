@@ -30,7 +30,7 @@ const cardSets = {
     "Fruits/watermelon.jpg",
     "Fruits/strawberry.jpg",
     "Fruits/guava.jpg",
-    "Fruits/orange.jpg",,
+    "Fruits/orange.jpg",
     "Fruits/orange.jpg",
     "Fruits/papaya.jpg",
     "Fruits/.jpg",
