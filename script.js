@@ -8,11 +8,14 @@ const cardSets = {
         "Animals/donkey.jpg",
         "Animals/cow.jpg",
         "Animals/jiraff.jpg",
-        "Animals/.jpg",
+        "Animals/gorila.jpg",
         "Animals/panda.jpg",
         "Animals/rabbit.jpg",
         "Animals/squirrel.jpg",
-        "Animals/monkey.jpg"
+        "Animals/monkey.jpg",
+        "Animals/tiger.jpg",
+        "Animals/pig.jpg",
+        "Animals/lion.jpg"
     ],
     flags: [
         "emojis/2.png",
@@ -46,9 +49,9 @@ const cardSets = {
     "Fruits/guava.jpg",
     "Fruits/orange.jpg",
     "Fruits/papaya.jpg",
-    "Fruits/.jpg",
-    "Fruits/.jpg",
-    "Fruits/.jpg"
+    "Fruits/coconut.jpg",
+    "Fruits/dragon.jpg",
+    "Fruits/lemon.jpg"
     ]
 };
 
